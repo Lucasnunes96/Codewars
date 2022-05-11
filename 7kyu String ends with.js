@@ -7,4 +7,6 @@ solution('abc', 'bc') // returns true
 solution('abc', 'd') // returns false */
 
 
-const solution = (string, ending) => string.endsWith(ending)
+const squareDigits = (num) => 
+parseInt(num.toString().split('').map(x => x*x).join(''))
+
