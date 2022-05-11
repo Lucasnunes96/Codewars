@@ -8,8 +8,7 @@ name + " does not play banjo"
 Names given are always valid strings.*/
 
 const areYouPlayingBanjo = (name) => 
-name.split('') // 'Ringo' => ['R','i','n','g','o']
-[0] // => gets 'R'
+name[0] // => gets 'R'
 .toLowerCase() // 'R' => 'r'
  === 'r' ? 
  `${name} plays banjo` // if equal 'r'
