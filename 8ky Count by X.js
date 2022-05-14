@@ -8,4 +8,7 @@ countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
 countBy(2,5) === [2,4,6,8,10]   */
 
 
-const countBy = (x,n) => [...Array(n)].map((a,b)=> x*(b+1))
+const countBy = (x,n) => 
+[...Array(n)] // creates an array with n numbers of 'undefined' elements. example: for n = 2 => ['undefined', 'undefined']
+.map((a,b)=> 
+x*(b+1))  // transforms every undefined element of the array into this formula, b = index
