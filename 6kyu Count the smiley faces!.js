@@ -17,15 +17,17 @@ countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
 Note
 In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.*/
 
-
-// function countSmileys(arr){
-//     let smileyFace = [':-)', ':-D', ':~)', ':~D', ':)', ':D',';-)', ';-D', ';~)', ';~D', ';)', ';D']
-//     let count = 0
-//     for(let i = 0; i<arr.length;i++){
-//         for(let j = 0;j<smileyFace.length;j++){
-//             if(arr[i]===smileyFace[j]){
-//                 count++
-//             }
-//         }
-//     } return count
-// }
+function countSmileys (arr){
+    let count = 0
+    for (let i = 0; i<arr.length;i++){
+        if(arr[i].charAt(0)===':'||arr[i].charAt(0)===';'){
+            if(arr[i].charAt(1)==='-'||arr[i].charAt(1)==='~'){
+                if(arr[i].charAt(2)===')'||arr[i].charAt(2)==='D'){
+                    count++
+                }
+            }else if(arr[i].charAt(1)==='D'||arr[i].charAt(1)===')'){
+                count++
+            }
+        }
+    }return count
+}
